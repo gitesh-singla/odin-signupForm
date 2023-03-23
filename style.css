@@ -3,18 +3,21 @@
     src: url(./Norse-Bold.otf);
 }
 
-:root {
-    font-size: 10px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
+
 
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto' , sans-serif;
     margin: 0;
 
     display: flex;
     align-items: stretch;
 }
 
+p {
+    margin: 0;
+}
 
 .main {
     flex: 1;
@@ -22,16 +25,17 @@ body {
 }
 
 .sidebar {
-    min-width: max(30% , 400px);
-    height: 100vh;
+    min-width: max(30% , 22rem);
+    min-height: 100vh;
     position: relative;
     background-image: url(./sidebar-img.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
+    padding: 0;
 }
 
 .sidebar-float {
     background-color: rgba(0, 0, 0, 0.2);
-    height: 12rem;
+    height: 10rem;
     align-items: center;
     color: white;
     font-family: Norse;
@@ -39,7 +43,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    font-size: 8rem;
+    font-size: 6rem;
     width: 100%;
 
     position: absolute;
@@ -47,27 +51,55 @@ body {
 }
 
 .sidebar-float > img {
-    width: 7rem;
+    width: 6rem;
 }
 
 h1 {
     background-color: white;
     margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 .form-section {
     background-color: white;
     box-shadow: 0px 4px  4px rgb(180, 180, 180) ;
-    padding-left: 80px;
-    padding-right: 240px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 1.5rem;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.form-section > div{
-    min-width: 30%;
-    margin-right: 120px;
+
+.inner-section{
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+
     margin-bottom: 20px;
+    font-size: 0.6rem;
+    color: grey;
+    font-weight: 700;
+}
+
+.inner-section > div {
+    min-width: max(40% , 120px);
+    white-space: nowrap;
+}
+
+.inner-section > div > input {
+    min-width: 100%;
+
+    border: solid 2px gray;
+    height: 1.6rem;
+    border-radius: 0.2rem;
+}
+
+input:focus {
+    outline: solid 2px rgb(52, 132, 77);
 }
 
 label {
@@ -75,6 +107,56 @@ label {
     margin-bottom: 4px;
 }
 
-input {
-    width: 100%;
+.text-header {
+    padding-left: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.text-header > p {
+    max-width: 60%;
+    margin-bottom: 1.2rem;
+}
+
+.text-header p:last-child{
+    font-style: italic;
+}
+
+
+button {
+    margin-left: 5rem;
+    margin-top: 2rem;
+    padding: 0.8rem 1rem;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(52, 132, 77);
+    border: none;
+    border-radius: 0.8rem;
+    box-shadow: 0.1rem 0.1rem 0.8rem grey;
+    transition: 0.1s all;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+button:focus {
+    outline: solid 2px rgb(52, 132, 77);
+}
+button:active{
+    scale:  1.1;
+}
+
+.outro {
+    margin-left: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(52, 132, 77, 0.821);
 }
